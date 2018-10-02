@@ -12,3 +12,12 @@ public class RCooperLib {
         return output;
     }
 }
+public class RCooperLib{
+    public static String dateStr (String date){
+      String outDate = date;
+     for (int index = outDate.indexOf("/"); index < date.length(); index =  outDate.indexOf("/") )
+      outDate = outDate.substring(0,index) + "-" + outDate.substring(index);
+        }
+        return
+    }
+}
