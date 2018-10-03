@@ -5,6 +5,6 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
         System.out.println("reverse of \'reverse\' is "+RCooperLib.reverse( "reverse"));
-        System.out.println("the version of 04/25/01 without ")
+        System.out.println("the version of \'04/25/01\' without slashes is "+RCooperLib.dateStr( "04/25/01"));
     }
 }

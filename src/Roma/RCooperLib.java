@@ -11,13 +11,12 @@ public class RCooperLib {
         }
         return output;
     }
-}
-public class RCooperLib{
-    public static String dateStr (String date){
-      String outDate = date;
-     for (int index = outDate.indexOf("/"); index < date.length(); index =  outDate.indexOf("/") )
-      outDate = outDate.substring(0,index) + "-" + outDate.substring(index);
+    public static String dateStr (String date)
+    {
+        String outDate = date;
+        for (int i = outDate.indexOf("/"); i < date.length(); i = outDate.indexOf("/")) {
+            outDate = outDate.substring(0, i) + "-" + outDate.substring(i);
         }
-        return
+        return outDate;
     }
 }
