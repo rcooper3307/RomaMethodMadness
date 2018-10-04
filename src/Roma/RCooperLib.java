@@ -13,10 +13,15 @@ public class RCooperLib {
     }
     public static String dateStr (String date)
     {
-        String outDate = date;
-        for (int i = outDate.indexOf("/"); i < date.length(); i = outDate.indexOf("/")) {
-            outDate = outDate.substring(0, i) + "-" + outDate.substring(i);
+        String outDate = "";
+        for (int i = date.indexOf("/"); i < date.length(); i = date.indexOf("/")) {
+            outDate = date.substring(0, i) + "-" + date.substring(i);
         }
         return outDate;
+    }
+    public static String cutOut( String mainStr, String subStr){
+        int index = mainStr.indexOf(subStr);
+        String out = "";
+        out = out + mainStr.substring(0, index) + mainS
     }
 }
