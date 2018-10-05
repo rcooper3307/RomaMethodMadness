@@ -11,17 +11,36 @@ public class RCooperLib {
         }
         return output;
     }
-    public static String dateStr (String date)
+    public static boolean isPalindrome(String input)
     {
-        String outDate = "";
-        for (int i = date.indexOf("/"); i < date.length(); i = date.indexOf("/")) {
-            outDate = date.substring(0, i) + "-" + date.substring(i);
-        }
-        return outDate;
-    }
-    public static String cutOut( String mainStr, String subStr){
-        int index = mainStr.indexOf(subStr);
         String out = "";
-        out = out + mainStr.substring(0, index) + mainS
+        for (int index = input.length(); index > 0 ; index--)
+        {
+            out = out + input.substring(index - 1, index);
+        }
+        if ( out.equals(input))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public static String cutOut(String input, String cut)
+    {
+        int index = input.indexOf(cut);
+        String out = "";
+        out = out + input.substring(0, index) + input.substring (index+ cut.length());
+        return out;
+    }
+    public static int sumUpTo(int input)
+    {
+        int sum = 0;
+        for(int i = 1; i < input+1; i++)
+        {
+            sum = sum + i;
+        }
+        return sum;
     }
 }
