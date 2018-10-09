@@ -27,7 +27,7 @@ public class RCooperLib {
         }
         return sum;
     }
-    public static String  primePrinter(int num){
+    public static String primePrinter(int num){
         String out = "";
         int primeNum = 2; //2 is the first prime number, so primeNum starts at 2
         for (int i = 0; i <= num; primeNum++)  //i is equal to the number of numbers that you've printed so far, and primeNum increases regardless of whether the number it's on is a prime number, because it's testing all of them
@@ -46,5 +46,11 @@ public class RCooperLib {
             }
         }
         return out;
+    }
+    public static String dateStr (String str){
+        String dateOne = str.substring(3,5); //this cuts the substring of the days
+        String dateTwo = str.substring(0,2); //this cuts the substring of the months
+        String dateThree = str.substring(6); //this cuts the substring of the years
+        return dateOne + " - " + dateTwo + " - " + dateThree; //this adds the three cuts together along with the dashes
     }
 }
